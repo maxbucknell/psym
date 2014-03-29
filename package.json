@@ -23,7 +23,13 @@
     ""
   ],
   "keywords":[
+    "math",
+    "symbolic",
+    "computation"
   ],
+  "dependencies": {
+    "lodash-node": "~2.4.1"
+  },
   "devDependencies": {
     "grunt-contrib-jshint": "~0.7.0",
     "grunt-contrib-nodeunit": "~0.2.0",
