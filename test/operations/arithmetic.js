@@ -125,6 +125,26 @@ describe('divide', function () {
   })
 })
 
+describe('raise', function () {
+  it('should calculate powers correctly', function () {
+    var a = atom.number(2)
+
+    core.evaluate(arithmetic.raise(a, 342))
+      .should.exactly(Math.pow(2, 342))
+  })
+
+  it('should print powers correctly', function () {
+    var a = atom.number(2)
+    var x = atom.symbol('x')
+
+    core.print(arithmetic.raise(a, 219))
+      .should.exactly('(2)^(219)')
+
+    core.print(arithmetic.raise(x, 219))
+      .should.exactly('(x)^(219)')
+  })
+})
+
 describe('nesting operations', function () {
   it('should calculate the product of two sums correctly', function () {
     var x = atom.symbol('x')
