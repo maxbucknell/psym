@@ -1,10 +1,9 @@
 {
-  "name": "math",
-  "version": "0.0.0",
-  "main": "lib/math.js",
+  "name": "psym",
+  "version": "0.1.0",
   "description": "Symbolic mathematics in JavaScript.",
   "homepage": "github.com/maxbucknell/math",
-  "bugs": "user/repo/issues",
+  "bugs": "maxbucknell/psym/issues",
   "author": {
     "name": "Max Bucknell",
     "email": "me@maxbucknell.com",
@@ -12,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "user/repo"
+    "url": "maxbucknell/psym"
   },
   "licenses": [
     {
