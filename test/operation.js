@@ -1,17 +1,17 @@
+/* global describe: false, it: false */
 
-
-var should = require('should')
 var _ = require('lodash-node')
 
 var core = require('../lib/core')
 var atom = require('../lib/atom')
 var operation = require('../lib/operation').operation
 
+require('should')
 
 describe('operation', function () {
   describe('identity operation', function () {
     function identity (x) {
-      return operation(_.head, _.head, _.toArray(arguments))
+      return operation(_.head, _.head, [x])
     }
 
     it('should print the correct value when given a number', function () {

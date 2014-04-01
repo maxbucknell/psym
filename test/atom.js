@@ -1,11 +1,11 @@
+/* global describe: false, it: false */
 
-
-var should = require('should')
 var _ = require('lodash-node')
 
 var core = require('../lib/core')
 var atom = require('../lib/atom')
 
+require('should')
 
 describe('number', function () {
   it('should evaluate to the correct value', function () {
