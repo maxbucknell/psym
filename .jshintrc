@@ -1,7 +1,6 @@
 {
   "asi": true,
   "curly": false,
-  "eqeqeq": true,
   "immed": true,
   "indent": 2,
   "latedef": false,
@@ -9,12 +8,13 @@
   "laxcomma": true,
   "newcap": true,
   "noarg": true,
+  "node": true,
   "nonew": true,
   "quotmark": "single",
+  "strict": true,
   "sub": true,
+  "trailing": true,
   "undef": true,
   "unused": true,
-  "boss": true,
-  "eqnull": true,
-  "node": true
+  "boss": true
 }
