@@ -11,3 +11,6 @@ module.exports = _.assign( {}
                          , require('./lib/atom')
                          , require('./lib/operation')
                          )
+
+
+module.exports.operations = require('./lib/operations')
