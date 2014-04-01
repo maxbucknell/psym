@@ -1,26 +1,23 @@
-# math [![Build Status](https://secure.travis-ci.org/maxbucknell/math.png?branch=master)](http://travis-ci.org/maxbucknell/math)
+# psym [![Build Status](https://secure.travis-ci.org/maxbucknell/psym.png?branch=master)](http://travis-ci.org/maxbucknell/psym)
 
 Symbolic mathematics in JavaScript.
 
-## Getting Started
-Install the module with: `npm install math`
+## Introduction
+
+Install the module with: `npm install psym`
 
 ```javascript
-var math = require('math');
-math.awesome(); // "awesome"
+var psym = require('psym')
+var a = psym.symbol('a')
+var expr = psym.operations.add(psym.operations.multiply(3, a), 4)
+
+psym.print(expr)
+// '((3)・(a)) + (4)'
+psym.evaluate(expr)
+// Error: Symbol 'a' could not be resolved into a number with given scope
+psym.evaluate(expr, {a: 10})
+// 34
 ```
-
-## Documentation
-_(Coming soon)_
-
-## Examples
-_(Coming soon)_
-
-## Contributing
-In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code using [Grunt](http://gruntjs.com/).
-
-## Release History
-_(Nothing yet)_
 
 ## License
 Copyright (c) 2014 Max Bucknell. Licensed under the MIT license.
