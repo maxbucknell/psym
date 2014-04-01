@@ -1,4 +1,6 @@
 /* global describe: false, it: false */
+'use strict';
+
 
 var _ = require('lodash-node')
 
