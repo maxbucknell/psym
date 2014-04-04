@@ -1,8 +1,6 @@
 /* global describe: false, it: false */
 'use strict';
 
-var _ = require('lodash-node')
-
 var core = require('../../lib/core')
 var atom = require('../../lib/atom')
 var arithmetic = require('../../lib/operations/arithmetic')
@@ -23,28 +21,7 @@ describe('add', function () {
     var b = atom.number(371)
 
     core.print(arithmetic.add(a, b))
-      .should.exactly('(56) + (371)')
-  })
-
-  it('should add twelve numbers correctly', function () {
-    var numbers = _.map(_.range(12), function (idx) {
-      return atom.number(idx * idx * 9 + 2)
-    })
-
-    core.evaluate(arithmetic.add.apply(null, numbers))
-      .should.exactly(4578)
-  })
-
-  it('should print the sum of twelve numbers correctly', function () {
-    var numbers = _.map(_.range(12), function (idx) {
-      return atom.number(idx * idx * 9 + 2)
-    })
-
-    var expectedResult = '(2) + (11) + (38) + (83) + (146) + (227)'
-      + ' + (326) + (443) + (578) + (731) + (902) + (1091)'
-
-    core.print(arithmetic.add.apply(null, numbers))
-      .should.exactly(expectedResult)
+      .should.exactly('56 + 371')
   })
 })
 
@@ -63,28 +40,7 @@ describe('multiply', function () {
     var b = atom.number(12538)
 
     core.print(arithmetic.multiply(a, b))
-      .should.exactly('(94356)・(12538)')
-  })
-
-  it('should multiply twelve numbers correctly', function () {
-    var numbers = _.map(_.range(12), function (idx) {
-      return atom.number(idx + 1)
-    })
-
-    core.evaluate(arithmetic.multiply.apply(null, numbers))
-      .should.exactly(479001600)
-  })
-
-  it('should print the product of twelve numbers correctly', function () {
-    var numbers = _.map(_.range(12), function (idx) {
-      return atom.number(idx * idx * 9 + 2)
-    })
-
-    var expectedResult = '(2)・(11)・(38)・(83)・(146)・(227)'
-      + '・(326)・(443)・(578)・(731)・(902)・(1091)'
-
-    core.print(arithmetic.multiply.apply(null, numbers))
-      .should.exactly(expectedResult)
+      .should.exactly('94356 ・ 12538')
   })
 })
 
@@ -103,7 +59,7 @@ describe('subtract', function () {
     var b = atom.number(365)
 
     core.print(arithmetic.subtract(a, b))
-      .should.exactly('(89) - (365)')
+      .should.exactly('89 - 365')
   })
 })
 
@@ -121,7 +77,7 @@ describe('divide', function () {
     var b = atom.number(347)
 
     core.print(arithmetic.divide(a, b))
-      .should.exactly('(450059) / (347)')
+      .should.exactly('450059 / 347')
   })
 })
 
@@ -138,10 +94,10 @@ describe('raise', function () {
     var x = atom.symbol('x')
 
     core.print(arithmetic.raise(a, 219))
-      .should.exactly('(2)^(219)')
+      .should.exactly('2 ^ 219')
 
     core.print(arithmetic.raise(x, 219))
-      .should.exactly('(x)^(219)')
+      .should.exactly('x ^ 219')
   })
 })
 
@@ -174,7 +130,7 @@ describe('nesting operations', function () {
     var expression = arithmetic.multiply(x, arithmetic.add(y, a))
 
     core.print(expression)
-      .should.exactly('(x)・((y) + (20))')
+      .should.exactly('x ・ (y + 20)')
   })
 
   it('should calculate the product of a division correctly', function () {
@@ -194,6 +150,6 @@ describe('nesting operations', function () {
     var expression = arithmetic.multiply(b, arithmetic.divide(a, b))
 
     core.print(expression)
-      .should.exactly('(5)・((20) / (5))')
+      .should.exactly('5 ・ (20 / 5)')
   })
 })
