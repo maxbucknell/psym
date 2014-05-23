@@ -5,10 +5,9 @@ var core = require('../../lib/core')
 var atom = require('../../lib/atom')
 var arithmetic = require('../../lib/operations/arithmetic')
 
-require('should')
 
 describe('add', function () {
-  it('should add two numbers correctly', function () {
+  it('adds two numbers correctly', function () {
     var a = atom.number(56)
     var b = atom.number(371)
 
@@ -16,7 +15,7 @@ describe('add', function () {
       .should.exactly(427)
   })
 
-  it('should print the sum of two numbers correctly', function () {
+  it('prints the sum of two numbers correctly', function () {
     var a = atom.number(56)
     var b = atom.number(371)
 
@@ -27,7 +26,7 @@ describe('add', function () {
 
 
 describe('multiply', function () {
-  it('should multiply two numbers correctly', function () {
+  it('multiplies two numbers correctly', function () {
     var a = atom.number(212)
     var b = atom.number(98)
 
@@ -35,7 +34,7 @@ describe('multiply', function () {
       .should.exactly(20776)
   })
 
-  it('should print the product of two numbers correctly', function () {
+  it('prints the product of two numbers correctly', function () {
     var a = atom.number(94356)
     var b = atom.number(12538)
 
@@ -46,7 +45,7 @@ describe('multiply', function () {
 
 
 describe('subtract', function () {
-  it('should subtract two numbers correctly', function () {
+  it('subtracts two numbers correctly', function () {
     var a = atom.number(98)
     var b = atom.number(92)
 
@@ -54,7 +53,7 @@ describe('subtract', function () {
       .should.exactly(6)
   })
 
-  it('should print the subtraction of two numbers correctly', function () {
+  it('prints the subtraction of two numbers correctly', function () {
     var a = atom.number(89)
     var b = atom.number(365)
 
@@ -64,7 +63,7 @@ describe('subtract', function () {
 })
 
 describe('divide', function () {
-  it('should divide two numbers correctly', function () {
+  it('divides two numbers correctly', function () {
     var a = atom.number(450059)
     var b = atom.number(347)
 
@@ -72,7 +71,7 @@ describe('divide', function () {
       .should.exactly(1297)
   })
 
-  it('should print the quotient of two numbers correctly', function () {
+  it('prints the quotient of two numbers correctly', function () {
     var a = atom.number(450059)
     var b = atom.number(347)
 
@@ -82,14 +81,14 @@ describe('divide', function () {
 })
 
 describe('raise', function () {
-  it('should calculate powers correctly', function () {
+  it('calculates powers correctly', function () {
     var a = atom.number(2)
 
     core.evaluate(arithmetic.raise(a, 342))
       .should.exactly(Math.pow(2, 342))
   })
 
-  it('should print powers correctly', function () {
+  it('prints powers correctly', function () {
     var a = atom.number(2)
     var x = atom.symbol('x')
 

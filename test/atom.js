@@ -7,7 +7,6 @@ var _ = require('lodash-node')
 var core = require('../lib/core')
 var atom = require('../lib/atom')
 
-require('should')
 
 describe('number', function () {
   it('is a number', function () {

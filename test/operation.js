@@ -8,8 +8,6 @@ var core = require('../lib/core')
 var atom = require('../lib/atom')
 var operation = require('../lib/operation').operation
 
-// Augments Object.prototype
-require('should')
 
 describe('operation', function () {
   describe('identity operation', function () {
