@@ -4,7 +4,6 @@ Symbolic mathematics in JavaScript.
 
 ## Introduction
 
-Install the module with: `npm install psym`
 
 ```javascript
 var psym = require('psym')
@@ -12,7 +11,7 @@ var a = psym.symbol('a')
 var expr = psym.operations.add(psym.operations.multiply(3, a), 4)
 
 psym.print(expr)
-// '((3)・(a)) + (4)'
+// '(3・a)+4)'
 psym.evaluate(expr)
 // Error: Symbol 'a' could not be resolved into a number with given scope
 psym.evaluate(expr, {a: 10})
@@ -20,4 +19,5 @@ psym.evaluate(expr, {a: 10})
 ```
 
 ## License
+
 Copyright (c) 2014 Max Bucknell. Licensed under the MIT license.
